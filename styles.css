@@ -1,0 +1,99 @@
+:root {
+  --primary: #2e5aac;
+  --muted: #6b7280;
+  --bg: #f9fafb;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: #111;
+  line-height: 1.6;
+}
+
+.cv-header {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.cv-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.cv-header .job-title {
+  margin-top: .5rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.cv-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: var(--card);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+.sidebar {
+  background: #f3f4f6;
+  padding: 1.5rem;
+  border-right: 1px solid #e5e7eb;
+}
+
+.sidebar h2 {
+  font-size: .9rem;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 1.5rem 0 .5rem;
+}
+
+.sidebar ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.content {
+  padding: 2rem;
+}
+
+.content h2 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: .2rem;
+  margin-bottom: 1rem;
+}
+
+.entry {
+  margin-bottom: 1rem;
+}
+
+.entry h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.meta {
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+@media(max-width: 768px) {
+  .cv-container {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
